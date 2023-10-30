@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('serve_static', path='style.css') }}">
+
+    <title>HEART DISEASE PREDICTIONS</title>
+</head>
+<body>
+    
+    
+
+        <div id="heropage">
+        <h2>predict heart disease </h2>
+
+        <a href="#secondpage" class="click">Predict</a>
+    
+        </div>
+    
+
+    <form id="secondpage" action="{{ url_for('predict') }}" method="post">
+        <label class="label" for="">Age</label>
+        <input id="elem" type="text" name="age" placeholder="age" required>
+        <label class="label" for="">sex(male/female)</label>
+        <input id="elem" type="text" name="sex" placeholder="1/0" required>
+        <label class="label" for="">cp level</label>
+        <input id="elem" type="text" name="cp" placeholder="cp level" required>
+        <label class="label" for="">trestbps</label>
+        <input id="elem" type="text" name="trestbps" placeholder="trestbps" required>
+        <label class="label" for="">chol</label>
+        <input id="elem" type="text" name="chol" placeholder="chol" required>
+        <label class="label" for="">fbs</label>
+        <input id="elem" type="text" name="fbs" placeholder="fbs" required>
+        <label class="label" for="">restecg</label>
+        <input id="elem" type="text" name="restecg" placeholder="restecg" required>
+        <label class="label" for="">thalach</label>
+        <input id="elem" type="text" name="thalach" placeholder="thalach" required>
+        <label class="label" for="">exang</label>
+        <input id="elem" type="text" name="exang" placeholder="exang" required>
+        <label class="label" for="">oldpeak</label>
+        <input id="elem" type="text" name="oldpeak" placeholder="oldpeak" required>
+        <label class="label" for="">slope</label>
+        <input id="elem" type="text" name="slope" placeholder="slope" required>
+        <label class="label" for="">ca</label>
+        <input id="elem" type="text" name="ca" placeholder="ca" required>
+        <label class="label" for="">thal</label>
+        <input id="elem" type="text" name="thal" placeholder="thal" required>
+        
+        <div class="sub">
+            <button type="submit">predict</button>
+        </div>
+        <div id="output">
+            <h2>Answer(true/false)- {{ display }}</h2>
+        </div>
+    </form>
+   
+    <footer>
+        <h2>made by sumeet supali</h2>
+        
+    </footer>
+    
+    
+    
+</body>
+</html>
+
